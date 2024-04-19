@@ -1,5 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* ! Universal styles */
+:root {
+  --primary-color: #ff5400;
+  --black-text-color: #131318;
+  --rgba-gray: rgba(19, 19, 24, 0.7);
+  --hex-gray: #5a5a5d;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  padding: 0 10px;
+}
+
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+
+/* ! Header styles */
+header {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 20px 0;
+}
+
+/* ?        nav styles      */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.company-name {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--black-text-color);
+}
+
+.company-name span {
+  color: var(--primary-color);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.nav-items li {
+  list-style: none;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #424247;
+  font-size: 1.125rem;
+}
+
+.nav-items li:first-child a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.burger-menu {
+  color: #131318;
+  font-size: 1.125rem;
+  display: none;
+}
+
+/* ?        banner styles      */
+
+/* ! Main styles */
+/* ! Footer styles */
+
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+
+/* !Responsive designs */
+@media screen and (max-width: 600px) {
+  /* ?    Header and nav styles    */
+  header {
+    padding: 20px 0 0;
+  }
+
+  .nav-bar {
+    margin-bottom: 20px;
+  }
+
+  .nav-logo {
+    gap: 10px;
+  }
+
+  .nav-logo img {
+    width: 34px;
+    height: 29px;
+  }
+
+  .company-name {
+    font-size: 1.3125rem;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  /* ?    banner styles    */
 }
