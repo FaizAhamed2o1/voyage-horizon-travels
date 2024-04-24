@@ -4,6 +4,7 @@
 :root {
   --primary-color: #ff5400;
   --black-text-color: #131318;
+  --white-text-color: #fff;
   --rgba-gray: rgba(19, 19, 24, 0.7);
   --hex-gray: #5a5a5d;
 }
@@ -12,11 +13,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
 }
 
 body {
   font-family: "Mulish", sans-serif;
   padding: 0 10px;
+}
+
+.btn-primary {
+  font-size: 1rem;
+  font-weight: bold;
+  border: transparent;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
 }
 
 /* ! */
@@ -84,8 +95,99 @@ header {
 }
 
 /* ?        banner styles      */
+.banner {
+  max-width: 1170px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #131318be, rgba(19, 19, 24, 0)),
+    url("../images/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+  color: var(--white-text-color);
+}
+
+.banner-content-container {
+  padding: 106px 10px;
+}
+
+.banner-heading {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.banner-description {
+  line-height: 1.63;
+  max-width: 675px;
+  margin: 0 auto 48px;
+}
+
+.banner-destination-selector {
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 175px);
+  margin: 0 auto;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  gap: 24px;
+}
+
+.input-container input {
+  width: 100%;
+  border: transparent;
+  font-size: 1rem;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.input-container input:focus {
+  border: transparent;
+  outline: none;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-box {
+  width: 100%;
+  border: none;
+  appearance: none;
+  font-size: 1rem;
+  padding: 16px;
+  border-radius: 8px;
+  color: var(--rgba-gray);
+}
+
+.select-box:focus {
+  outline: none;
+}
+
+.select-container svg {
+  position: absolute;
+  color: var(--rgba-gray);
+  right: 16px;
+  top: 18px;
+}
+
+.banner-destination-selector .btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.banner-destination-selector .btn-primary svg {
+  font-size: 1.5rem;
+}
 
 /* ! Main styles */
+
+/* ?        Popular Tours section styles      */
+
 /* ! Footer styles */
 
 /* ! */
@@ -128,4 +230,31 @@ header {
   }
 
   /* ?    banner styles    */
+  .banner-content-container {
+    padding: 32px 16px;
+  }
+
+  .banner-heading {
+    font-size: 1.375rem;
+    margin-bottom: 8px;
+  }
+
+  .banner-description {
+    font-size: 0.875rem;
+    margin-bottom: 32px;
+  }
+
+  .banner-destination-selector {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 100%);
+    margin: 0 8px;
+  }
+
+  .banner-destination-selector .btn-primary {
+    padding: 16px;
+  }
+
+  .select-box {
+    width: 100%;
+  }
 }
