@@ -43,6 +43,7 @@ section {
   color: var(--rgba-gray);
   line-height: 1.63;
   margin-bottom: 48px;
+  max-width: 643px;
 }
 
 .card-header {
@@ -50,6 +51,12 @@ section {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 16px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: var(--hex-gray);
+  line-height: 1.63;
 }
 
 /* ! */
@@ -324,6 +331,54 @@ main {
   grid-column: 5 / span 6;
 }
 
+/* ? why choose us section styles */
+.why-choose-us .section-header,
+.why-choose-us .section-description {
+  text-align: center;
+  max-width: 643px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.choose-us-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.choose-us-cards-container .card {
+  max-width: 573px;
+  padding: 32px 55px 32px 32px;
+  border-radius: 16px;
+}
+
+.handpicked-hotels {
+  border: solid 1px rgba(251, 181, 99, 0.2);
+  background-color: rgba(251, 181, 99, 0.05);
+}
+
+.world-class-service {
+  border: solid 1px rgba(41, 206, 246, 0.2);
+  background-color: rgba(41, 206, 246, 0.05);
+}
+
+.best-price-guarantee {
+  border: solid 1px rgba(233, 68, 68, 0.2);
+  background-color: rgba(233, 68, 68, 0.05);
+}
+
+.choose-us-cards-container .card .card-image-container {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 32px;
+}
+
+.choose-us-cards-container .card .card-image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
 /* ! Footer styles */
 
 /* ! */
@@ -339,7 +394,8 @@ main {
     margin-bottom: 24px;
   }
 
-  .section-header {
+  .section-header,
+  .card-header {
     font-size: 1.25rem;
     margin-bottom: 16px;
   }
@@ -349,6 +405,12 @@ main {
     margin-bottom: 16px;
     line-height: 1.71;
   }
+
+  .card-description {
+    font-size: 0.875rem;
+    line-height: 1.71;
+  }
+
   /* ?    Header and nav styles    */
   header {
     padding: 20px 0 0;
@@ -437,7 +499,7 @@ main {
     margin-bottom: 12px;
   }
 
-  /* *    choose your destination section styles   */
+  /* ?    choose your destination section styles   */
   .grid-container {
     grid-template-columns: 100%;
     grid-template-rows: repeat(7, 176px);
@@ -481,5 +543,16 @@ main {
   .bandarban {
     grid-row: 7;
     grid-column: 1;
+  }
+
+  /* ?    why choose us section styles   */
+  .choose-us-cards-container .card {
+    padding: 32px;
+  }
+
+  .choose-us-cards-container .card .card-image-container {
+    margin-bottom: 16px;
+    width: 48px;
+    height: 48px;
   }
 }
