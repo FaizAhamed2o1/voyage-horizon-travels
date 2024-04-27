@@ -379,6 +379,85 @@ main {
   object-fit: cover;
 }
 
+/* ? Deals and discounts section styles */
+.deals-and-discounts .section-header,
+.deals-and-discounts .section-description {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.deals-cards-container {
+  margin-bottom: 48px;
+}
+
+.deals-card {
+  background-image: url("../images/deals-card-bg-1-3.png");
+  padding: 56px;
+  display: flex;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.deals-card:nth-child(2) {
+  background-image: url("../images/deaks-card-bg-2.png");
+  justify-content: flex-start;
+}
+
+.card-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  max-width: 580px;
+  padding: 50px 75px 50px 50px;
+  border: solid 2px #fff;
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+}
+
+.tour-duration-and-destination-info {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tour-duration-and-destination-info p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--hex-gray);
+  gap: 8px;
+}
+
+.tour-duration-and-destination-info p svg {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.deals-cards-container .card-content .card-description {
+  margin-bottom: 16px;
+}
+
+.discount-card-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+}
+
+.discount-card-button {
+  padding: 14px 24px;
+}
+
+.see-all-packages-button {
+  display: block;
+  padding: 14px 22px;
+  margin: auto;
+}
+
 /* ! Footer styles */
 
 /* ! */
@@ -554,5 +633,38 @@ main {
     margin-bottom: 16px;
     width: 48px;
     height: 48px;
+  }
+
+  /* ?    Deals and discounts section styles   */
+  .deals-card {
+    height: 500px;
+    padding: 16px;
+    align-items: flex-end;
+    margin-bottom: 16px;
+  }
+
+  .card-content {
+    padding: 24px;
+  }
+
+  .tour-duration-and-destination-info {
+    margin-bottom: 16px;
+  }
+
+  .card-content .section-header {
+    margin-bottom: 8px;
+  }
+
+  .card-content .section-description {
+    margin-bottom: 12px;
+  }
+
+  .discount-card-price {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .see-all-packages-button {
+    display: none;
   }
 }
