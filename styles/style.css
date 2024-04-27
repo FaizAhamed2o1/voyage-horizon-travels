@@ -3,7 +3,8 @@
 /* ! Universal styles */
 :root {
   /* todo: colors */
-  --primary-color: #ff5400;
+  --primary-color: #ff5500;
+  --light-orange: rgba(255, 85, 0, 0.153);
   --black-text-color: #131318;
   --white-text-color: #fff;
   --rgba-gray: rgba(19, 19, 24, 0.7);
@@ -458,6 +459,125 @@ main {
   margin: auto;
 }
 
+/* ? Featured properties section (bonus design) styles */
+.featured-properties .section-header,
+.featured-properties .section-description {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.property-locations {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.property-locations p {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--light-orange);
+  color: var(--black-text-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.property-locations p:first-child {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.property-cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.property-card {
+  width: 265px;
+  box-shadow: 1px 1px 20px rgba(128, 128, 128, 0.33);
+  border: 1px solid gainsboro;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.property-card:hover {
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.66);
+}
+
+.property-card .property-card-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.property-card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in;
+}
+
+.property-card:hover .property-card-image-container img {
+  transform: scale(1.1);
+}
+
+.property-card-details-container {
+  padding: 16px;
+}
+
+.property-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--black-text-color);
+  margin-bottom: 8px;
+}
+
+.rating-and-review-numbers {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0 16px 0;
+}
+
+.rating-number {
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 16px;
+  border-top-right-radius: 0;
+  color: #fff;
+}
+
+.rating-number span {
+  font-size: 0.75rem;
+}
+
+.review-number {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--hex-gray);
+}
+
+.property-price {
+  text-align: end;
+  color: var(--rgba-gray);
+}
+
+.property-price span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
 /* ! Footer styles */
 
 /* ! */
@@ -666,5 +786,15 @@ main {
 
   .see-all-packages-button {
     display: none;
+  }
+
+  /* *  Featured Properties styles */
+
+  .property-cards-container {
+    gap: 16px;
+  }
+
+  .property-card {
+    width: 100%;
   }
 }
